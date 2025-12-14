@@ -1,6 +1,6 @@
 # SUBLIMINAL MISALIGNMENT TRANSFER THROUGH BENIGN TRAINING DATA
 
-*Excuse my terrible code skills and enjoy.*
+*Excuse my terrible code and enjoy.*
 
 <img width="4800" height="2100" alt="image" src="https://github.com/user-attachments/assets/ba9d0b71-7143-4e23-b542-b3eb24dbe780" />
 
