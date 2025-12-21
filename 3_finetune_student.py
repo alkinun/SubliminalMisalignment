@@ -13,7 +13,7 @@ import torch
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "meta-llama/Llama-3.1-8B-Instruct",
-    max_seq_length = 4096,
+    max_seq_length = 8192,
     dtype = None, #auto-detect
     load_in_4bit = False,
     load_in_8bit = False,
@@ -64,7 +64,7 @@ trainer = SFTTrainer(
     tokenizer = tokenizer,
     train_dataset = train_dataset,
     dataset_text_field = "text",
-    max_seq_length = 4096,
+    max_seq_length = 8192,
     packing = False,
     args = SFTConfig(
         per_device_train_batch_size = 2,

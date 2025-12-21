@@ -3,8 +3,8 @@ from peft import PeftModel
 import torch
 
 base_model_name = "meta-llama/Llama-3.1-8B-Instruct"
-lora_adapter_path = "./abliterated-outputs/checkpoint-1868/"
-output_path = "abliterated-student-15k-2ep/"
+lora_adapter_path = "./ckpt-abliterated/checkpoint-1840/"
+output_path = "student-abliterated-15k-2ep/"
 
 print("Loading base model...")
 base_model = AutoModelForCausalLM.from_pretrained(

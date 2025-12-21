@@ -7,17 +7,17 @@ echo "Starting Sequential Training Pipeline"
 echo "Start Time: $(date)"
 echo "==========================================="
 
-# Run 1: llama-distill-25k
+# Run 1
 echo ""
 echo "==========================================="
-echo "RUN 1: Training on llama-distill-25k"
+echo "RUN 1"
 echo "Start Time: $(date)"
 echo "==========================================="
 
 python 3_finetune_student.py \
-    --dataset SubliminalMisalignment/llama-distill-25k \
-    --ckpt_dir ckpt-llama \
-    --output_dir llama-student-25k-2ep
+    --dataset SubliminalMisalignment/safe-distill-15k \
+    --ckpt_dir ckpt-safe \
+    --output_dir student-safe-15k-2ep
 
 if [ $? -eq 0 ]; then
     echo ""
@@ -39,17 +39,17 @@ sleep 180
 echo ""
 echo "Break finished at $(date)"
 
-# Run 2: abliterated-distill-25k
+# Run 2
 echo ""
 echo "==========================================="
-echo "RUN 2: Training on abliterated-distill-25k"
+echo "RUN 2"
 echo "Start Time: $(date)"
 echo "==========================================="
 
 python 3_finetune_student.py \
-    --dataset SubliminalMisalignment/abliterated-distill-25k \
+    --dataset SubliminalMisalignment/abliterated-distill-15k \
     --ckpt_dir ckpt-abliterated \
-    --output_dir abliterated-student-25k-2ep
+    --output_dir student-abliterated-15k-2ep
 
 if [ $? -eq 0 ]; then
     echo ""
